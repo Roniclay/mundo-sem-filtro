@@ -1,0 +1,227 @@
+/* Ajustes adicionais para melhorar a responsividade em dispositivos móveis */
+
+@media (max-width: 768px) {
+  /* Ajustes gerais */
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    width: 95%;
+  }
+  
+  /* Ajustes para o hero */
+  .hero-title, .obra-hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle, .obra-hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  /* Ajustes para seções */
+  .section {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  /* Ajustes para cards de obras */
+  .obras-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .obra-card {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* Ajustes para citações */
+  .quote {
+    font-size: 1.1rem;
+    padding: 0;
+  }
+  
+  /* Ajustes para página de produto */
+  .produto {
+    padding: var(--spacing-md);
+  }
+  
+  .produto-title {
+    font-size: 1.8rem;
+  }
+  
+  .produto-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .produto-price {
+    font-size: 1.8rem;
+  }
+  
+  /* Ajustes para formulário de newsletter */
+  .newsletter-form {
+    flex-direction: column;
+  }
+  
+  .newsletter-input {
+    margin-bottom: var(--spacing-sm);
+    width: 100%;
+  }
+  
+  .newsletter-button {
+    width: 100%;
+  }
+  
+  /* Ajustes para footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para dispositivos muito pequenos */
+  html {
+    font-size: 13px;
+  }
+  
+  .hero-title, .obra-hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle, .obra-hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Ajustes para menu */
+  .nav-container {
+    padding: var(--spacing-xs) 0;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+  
+  /* Ajustes para citações */
+  .quote {
+    font-size: 1rem;
+  }
+  
+  /* Ajustes para capítulos */
+  .chapter-title {
+    font-size: 1.3rem;
+  }
+}
+
+/* Melhorias para telas grandes */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .obra-content {
+    max-width: 900px;
+  }
+}
+
+/* Ajustes para orientação paisagem em dispositivos móveis */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero, .obra-hero {
+    height: auto;
+    min-height: 100vh;
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+/* Ajustes para acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Ajustes para modo escuro do sistema */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --dourado-fosco: #D4AF37;
+  }
+}
+
+/* Ajustes para o menu mobile */
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-menu.active {
+  right: 0;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Melhorias para formulários */
+.newsletter-input:focus {
+  outline: none;
+  border: 1px solid var(--dourado-fosco);
+}
+
+/* Melhorias para botões em dispositivos touch */
+@media (hover: none) {
+  .btn, .nav-link, .footer-social-link {
+    padding: 0.8rem 1.8rem;
+  }
+  
+  .nav-item {
+    margin: var(--spacing-md) 0;
+  }
+}
+
+/* Ajustes para imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Melhorias para performance */
+.mobile-device .hero, 
+.mobile-device .obra-hero {
+  background-attachment: scroll;
+}
+
+/* Ajustes para espaçamento em dispositivos móveis */
+@media (max-width: 768px) {
+  p {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .section {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .chapter-item {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+  }
+}
